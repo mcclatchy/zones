@@ -1,0 +1,21 @@
+{
+  "name": "@mcclatchy/zones",
+  "version": "1.0.0",
+  "description": "A Yozons extension to dynamically distribute or re-distribute zones on the websites.",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mcclatchy/zones.git"
+  },
+  "author": "Jay Pilgreen",
+  "bugs": {
+    "url": "https://github.com/mcclatchy/zones/issues"
+  },
+  "homepage": "https://github.com/mcclatchy/zones#readme"
+}
