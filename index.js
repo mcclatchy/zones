@@ -20,7 +20,7 @@ function distributeZones(locker) {
 
     if(map) {
       locker.executeWhenDOMReady(() => {
-        zones.renderMap(map)
+        zones.renderMap(map);
         resolve("zones-loaded");
       });
     } else {
