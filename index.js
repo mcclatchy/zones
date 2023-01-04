@@ -7,10 +7,9 @@ import * as zones from "./lib/zones.js";
 
 function distributeZones(locker) {
   return new Promise((resolve, reject) => {
-    let pt = locker.getPageType();
     let map = null;
 
-    switch(pt) {
+    switch(locker.pageType) {
       case "sectfront":
         map = section(locker);
         break;
