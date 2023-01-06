@@ -1,7 +1,7 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-pagetype="sectfront">
   <head>
-    <title>Distribute Zones demo</title>
+    <title>Zones section demo</title>
     <link rel="icon" type="image/x-icon" href="https://www.kansascity.com/favicon.ico">
     
     <meta charset="UTF-8">
@@ -11,58 +11,12 @@
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="mobile-web-app-capable" content="yes">
 
-    <link rel="stylesheet" href="./saratoga.css">
-
-    <style>
-      .card, .zone {
-        min-height: 300px;
-      }
-
-      .lead-item {
-        min-height: 600px;
-      }
-
-      .flag {
-        min-height: 250px;
-        display: grid;
-        place-items: center;
-        --paper-color: #ddd;
-      }
-
-      .flag::before {
-        content: "flag";
-        font: bold 1rem var(--sans);
-      }
-
-      [id^=zone-el] {
-        display: block !important;
-        min-height: 300px;
-        background-color: blue !important;
-      }
-
-      [id^=zone-el][data-distributed] {
-        background-color: green !important;
-      }
-
-      [id^=zone-el]:before {
-        content: attr(id);
-        display: block;
-        padding: 15px;
-        color: white;
-        font: bold 1rem var(--sans);
-      }
-    </style>
-
-    <script>
-      pageInfo = {
-        "marketInfo.pagelevel": "sectfront",
-        "template": "2022section"
-      }
-    </script>
+    <link rel="stylesheet" href="https://storage.googleapis.com/mc-high-impact/saratoga/saratoga-1.16.4.css">
+    <link rel="stylesheet" href="/demo/demo.css">
 
     <script type="module">
-      import locker from "../lib/locker.js";
-      import distributeZones from "../index.js";
+      import locker from "/lib/locker.js";
+      import distributeZones from "/index.js";
 
       distributeZones(locker);
     </script>
@@ -72,6 +26,7 @@
     <div id="zone-el-1"></div>
     <div id="zone-el-2"></div>
     <div class="card flag"></div>
+
     <section class="grid">
       <article class="card lead-item"></article>
       <div id="zone-el-3" class="zone two-rows"></div>

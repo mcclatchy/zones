@@ -1,0 +1,84 @@
+/*
+ * Demo supplements
+ */
+
+.card, .zone {
+  min-height: 300px;
+}
+
+.lead-item {
+  min-height: 600px;
+}
+
+.flag {
+  min-height: 250px;
+  display: grid;
+  place-items: center;
+  --paper-color: #ddd;
+}
+
+.flag::before {
+  content: "flag";
+  font: bold 1rem var(--sans);
+}
+
+[id^=zone-el] {
+  display: block !important;
+  min-height: 300px;
+  background-color: blue !important;
+}
+
+[id^=zone-el][data-distributed] {
+  background-color: green !important;
+}
+
+[id^=zone-el]:before {
+  content: attr(id);
+  display: block;
+  padding: 15px;
+  color: white;
+  font: bold 1rem var(--sans);
+}
+
+/*
+ * Story stuff
+ */
+
+.zone.grid {
+  justify-items: unset;
+}
+
+.zone.grid .zone {
+  grid-column-end: unset;
+}
+
+.embed {
+  min-height: 150px;
+  display: grid;
+  place-items: center;
+  background-color: var(--impact);
+  padding: 0;
+}
+
+.embed::before {
+  content: "embed";
+  font: bold 1rem var(--sans);
+  color: white;
+}
+
+.end {
+  min-height: 150px;
+  display: grid;
+  place-items: center;
+  background-color: #ddd;
+  padding: 0;
+}
+
+.end::before {
+  content: "end of story";
+  font: bold 1rem var(--sans);
+}
+
+.msb .story-body p:not([data-vip]) {
+  opacity: 0.2;
+}
