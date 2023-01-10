@@ -78,7 +78,3 @@
   content: "end of story";
   font: bold 1rem var(--sans);
 }
-
-.msb .story-body p:not([data-vip]) {
-  opacity: 0.2;
-}
