@@ -2,33 +2,25 @@
  * Zones extension (Yozons)
  */
 
-import * as zones from "./lib/zones.js";
-import section from "./lib/section.js";
-import story from "./lib/story.js";
+import * as section from "./lib/section.js";
+import * as story from "./lib/story.js";
 
 function distributeZones(locker) {
   return new Promise((resolve, reject) => {
-    let map = null;
+    locker.executeWhenDOMReady(() => {
+      switch(locker.pageType) {
+        case "sectfront":
+          section.render(locker);
+          break;
+        case "story":
+          story.render(locker);
+          break;
+        default:
+          reject("not a matching page type");
+      }
 
-    switch(locker.pageType) {
-      case "sectfront":
-        map = section(locker);
-        break;
-      case "story":
-        map = story(locker);
-        break;
-      default:
-        // do nothing
-    }
-
-    if(map) {
-      locker.executeWhenDOMReady(() => {
-        zones.renderMap(map);
-        resolve("zones-loaded");
-      });
-    } else {
-      reject("zone map is empty");
-    }
+      resolve("zones-loaded")
+    });
   });
 }
 

@@ -78,3 +78,7 @@
   content: "end of story";
   font: bold 1rem var(--sans);
 }
+
+.story-body > p:not(.vip) {
+  opacity: .2;
+}

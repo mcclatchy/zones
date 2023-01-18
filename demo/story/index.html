@@ -18,12 +18,16 @@
       import locker from "/lib/locker.js";
       import distributeZones from "/index.js";
 
+      // Mimic the Yozons implementation
       distributeZones(locker);
 
-      // Show vips for demos
-      if(locker.user.isSubscriber()) {
-        document.documentElement.classList.add("msb");
-      }
+      // Demo-only show vips
+      import {getValidInsertionPoints} from "/lib/zones.js";
+      const vips = getValidInsertionPoints();
+      vips.forEach(ele => ele.classList.add("vip"));
+
+      // Listen for the loaded event
+      window.addEventListener("zones-loaded", console.log("zones are loaded"));
     </script>
   </head>
 
