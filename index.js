@@ -2,6 +2,7 @@
  * Zones extension (Yozons)
  */
 
+import * as zones from "./lib/zones.js";
 import * as section from "./lib/section.js";
 import * as story from "./lib/story.js";
 
@@ -20,15 +21,16 @@ function distributeZones(locker) {
       }
 
       resolve("zones-loaded")
+    });
 
-      // Set up the communication bridge
-      window.addEventListener("load", () => {
-        try {
-          window.mi.zones.changes = zones.changes;
-        } catch(e) {
-          console.warn("cannot add changes to the zones object", e);
-        }
-      });
+    // Set up the communication bridge
+    window.addEventListener("load", () => {
+      debugger;
+      try {
+        window.mi.zones.changes = zones.changes;
+      } catch(e) {
+        console.warn("cannot add changes to the zones object", e);
+      }
     });
   });
 }
