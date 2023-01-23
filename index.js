@@ -23,7 +23,11 @@ function distributeZones(locker) {
 
       // Set up the communication bridge
       window.addEventListener("load", () => {
-        console.log(window.mi.zones);
+        try {
+          window.mi.zones.changes = zones.changes;
+        } catch(e) {
+          console.warn("cannot add changes to the zones object");
+        }
       });
     });
   });
