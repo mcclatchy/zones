@@ -8,8 +8,6 @@ import * as story from "./lib/story.js";
 function distributeZones(locker) {
   return new Promise((resolve, reject) => {
     locker.executeWhenDOMReady(() => {
-      console.log(window.mi, window.mi.zones);
-
       switch(locker.pageType) {
         case "sectfront":
           section.render(locker);
@@ -22,6 +20,11 @@ function distributeZones(locker) {
       }
 
       resolve("zones-loaded")
+
+      // Set up the communication bridge
+      window.addEventListener("load", () => {
+        console.log(window.mi.zones);
+      });
     });
   });
 }
