@@ -26,7 +26,7 @@ function distributeZones(locker) {
         try {
           window.mi.zones.changes = zones.changes;
         } catch(e) {
-          console.warn("cannot add changes to the zones object");
+          console.warn("cannot add changes to the zones object", e);
         }
       });
     });
