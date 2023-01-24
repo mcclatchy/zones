@@ -23,8 +23,9 @@ function distributeZones(locker) {
       resolve("zones-loaded")
     });
 
-    // Set up the communication bridge
+    // Add the communication bridge and vip method to the zones API
     locker.getYozonsLocker("zones").changes = zones.changes;
+    locker.getYozonsLocker("zones").getValidInsertionPoints = zones.getValidInsertionPoints;
   });
 }
 
