@@ -2,6 +2,7 @@
  * Zones extension (Yozons)
  */
 
+import * as zones from "./lib/zones.js";
 import * as section from "./lib/section.js";
 import * as story from "./lib/story.js";
 
@@ -21,6 +22,9 @@ function distributeZones(locker) {
 
       resolve("zones-loaded")
     });
+
+    // Set up the communication bridge
+    locker.getYozonsLocker("zones").changes = zones.changes;
   });
 }
 
