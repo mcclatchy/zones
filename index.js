@@ -7,6 +7,7 @@ import * as section from "./lib/section.js";
 import * as story from "./lib/story.js";
 
 function distributeZones(locker) {
+  // Give the performance team a promise
   return new Promise((resolve, reject) => {
     locker.executeWhenDOMReady(() => {
       switch(locker.pageType) {

@@ -22,17 +22,17 @@
   font: bold 1rem var(--sans);
 }
 
-[id^=zone-el] {
+[id^=zone-] {
   display: block !important;
   min-height: 300px;
   background-color: blue !important;
 }
 
-[id^=zone-el][data-distributed] {
+[id^=zone-][data-distributed] {
   background-color: green !important;
 }
 
-[id^=zone-el]:before {
+[id^=zone-]:before {
   content: attr(id);
   display: block;
   padding: 15px;
