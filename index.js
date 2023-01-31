@@ -7,6 +7,10 @@ import * as section from "./lib/section.js";
 import * as story from "./lib/story.js";
 
 function distributeZones(locker) {
+  // Add the communication bridge and vip method to the zones API
+  locker.getYozonsLocker("zones").changes = zones.changes;
+  locker.getYozonsLocker("zones").getValidInsertionPoints = zones.getValidInsertionPoints;
+
   // Give the performance team a promise
   return new Promise((resolve, reject) => {
     locker.executeWhenDOMReady(() => {
@@ -23,10 +27,6 @@ function distributeZones(locker) {
 
       resolve("zones-loaded")
     });
-
-    // Add the communication bridge and vip method to the zones API
-    locker.getYozonsLocker("zones").changes = zones.changes;
-    locker.getYozonsLocker("zones").getValidInsertionPoints = zones.getValidInsertionPoints;
   });
 }
 
