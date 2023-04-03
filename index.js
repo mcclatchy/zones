@@ -5,6 +5,7 @@
 import * as zones from "./lib/zones.js";
 import * as section from "./lib/section.js";
 import * as story from "./lib/story.js";
+import * as homepage from "./lib/homepage.js";
 
 function distributeZones(locker) {
   // Add the communication bridge and vip method to the zones API
@@ -20,6 +21,9 @@ function distributeZones(locker) {
           break;
         case "story":
           story.render(locker);
+          break;
+        case "homepage":
+          homepage.render(locker);
           break;
         default:
           reject("not a matching page type");
