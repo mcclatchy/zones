@@ -19,13 +19,13 @@ function distributeZones(locker) {
     locker.executeWhenDOMReady(() => {
       switch(locker.pageType) {
         case "sectfront":
-          section.render(locker);
+          section.render();
           break;
         case "story":
-          story.render(locker);
+          story.render();
           break;
         case "homepage":
-          homepage.render(locker);
+          homepage.render();
           break;
         default:
           reject("not a matching page type");

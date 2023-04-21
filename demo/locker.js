@@ -20,6 +20,8 @@ const locker = {
         return "News/Local//";
       case "zone.carousel":
         return true;
+      case "zone.zeeto":
+        return true;
       default: 
         return undefined;
     }
@@ -28,7 +30,7 @@ const locker = {
   // user info
   user: {
     isSubscriber() {
-      return true;
+      return false;
     },
 
     isLoggedIn() {
@@ -61,6 +63,12 @@ const locker = {
       case "zones":
         window.mi.zones = window.mi.zones || {};
         return window.mi.zones;
+      case "analytics":
+        return {
+          addEventToQueue: function(obj) {
+            console.log("adding event:", obj);
+          }
+        }
       default:
         // nothing
     }
