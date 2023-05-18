@@ -1,11 +1,12 @@
-current != awk '/version/{print $$2}' package.json | egrep -o "([0-9]{1,}\.?)+"
-version != echo $(current) | awk '{ split($$0,v,"."); print v[1] "." v[2] "." int(v[3])+1 }'
+version = $(error Missing version number)
+current = $(shell grep -Eo '([0-9]{1,}\.?){3}' package.json)
 
 default:
 	@ echo "please specify a make rule"
 
 release:
-	@ sed -E -i 's/([0-9]+\.){2}([0-9]+)/$(version)/' package.json
+	awk -v c="$(current)" -v n="$(version)" "{sub(c,n); print}" package.json > tmp.json
+	mv tmp.json package.json
 	git add package.json
 	git commit -m "updating package.json to $(version)"
 	git push
