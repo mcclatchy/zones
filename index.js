@@ -8,24 +8,30 @@ import * as story from "./lib/story.js";
 import * as homepage from "./lib/homepage.js";
 
 function distributeZones(locker) {
-  // Set the locker for future use
-  Object.assign(zones.locker, locker);
+  // Setup
+  zones.setLocker(locker);
 
   // Add the communication bridge 
   locker.getYozonsLocker("zones").changes = zones.changes;
+
+  // Bail if ads are disabled
+  if(!locker.areAdsAllowed()) {
+    zones.log("none", "ads are disabled");
+    return;
+  }
 
   // Give the performance team a promise
   return new Promise((resolve, reject) => {
     locker.executeWhenDOMReady(() => {
       switch(locker.pageType) {
         case "sectfront":
-          section.render();
+          section.render(locker);
           break;
         case "story":
-          story.render();
+          story.render(locker);
           break;
         case "homepage":
-          homepage.render();
+          homepage.render(locker);
           break;
         default:
           reject("not a matching page type");

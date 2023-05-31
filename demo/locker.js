@@ -17,10 +17,14 @@ const locker = {
       case "marketInfo.domain":
         return "miamiherald";
       case "marketInfo.taxonomy":
-        return "News/Local//";
+        return "News/Sports//";
+      case "articleCredit":
+        return "The Kansas City Star";
       case "zone.carousel":
         return true;
       case "zone.zeeto":
+        return true;
+      case "zone.moneycom":
         return true;
       default: 
         return undefined;
