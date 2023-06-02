@@ -1,0 +1,30 @@
+
+{
+  "zones": [
+    {
+      "id": "zone-community-events",
+      "type": "editorial",
+      "filters": [
+        {
+          "type": "config",
+          "name": "zone.communityEvents",
+          "value": true
+        }
+      ],
+      "zephr": {
+        "feature": "zone-community-events",
+        "dataset": [
+          {
+            "type": "config",
+            "name": "market",
+            "value": "marketInfo.domain"
+          }
+        ]
+      },
+      "placement": {
+        "type": "query",
+        "value": "#zone-el-5"
+      }
+    }
+  ]
+}

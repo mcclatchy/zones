@@ -26,6 +26,8 @@ const locker = {
         return true;
       case "zone.moneycom":
         return true;
+      case "zone.communityEvents":
+        return true;
       default: 
         return undefined;
     }
@@ -34,7 +36,7 @@ const locker = {
   // user info
   user: {
     isSubscriber() {
-      return false;
+      return true;
     },
 
     isLoggedIn() {

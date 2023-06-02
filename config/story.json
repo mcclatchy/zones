@@ -1,5 +1,4 @@
 {
-  "pageType": "story",
   "base": ".story-body [id^=zone-el]",
   "ignore": ["zone-el-16"],
   "zones": [
@@ -14,12 +13,12 @@
         {
           "type": "config",
           "name": "articleCredit",
-          "value": "^((?!Paradise Media|Bankrate).)*$"
+          "pattern": "(Paradise Media|Bankrate)",
+          "value": false
         }
       ],
       "zephr": {
-        "feature": "zone-moneycom",
-        "dataset": []
+        "feature": "zone-moneycom"
       },
       "placement": {
         "type": "after",
@@ -32,12 +31,13 @@
         {
           "type": "subscriber",
           "value": true
+        },
+        {
+          "type": "config",
+          "name": "zone.carousel",
+          "value": true
         }
       ],
-      "param": {
-        "name": "zone.carousel",
-        "value": true
-      },
       "zephr": {
         "feature": "zone-featured-carousel",
         "dataset": [

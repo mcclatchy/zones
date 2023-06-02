@@ -3,9 +3,8 @@
  */
 
 import * as zones from "./lib/zones.js";
-import * as section from "./lib/section.js";
+import * as config from "./lib/config.js";
 import * as story from "./lib/story.js";
-import * as homepage from "./lib/homepage.js";
 
 function distributeZones(locker) {
   // Setup
@@ -14,24 +13,27 @@ function distributeZones(locker) {
   // Add the communication bridge 
   locker.getYozonsLocker("zones").changes = zones.changes;
 
-  // Bail if ads are disabled
-  if(!locker.areAdsAllowed()) {
-    zones.log("none", "ads are disabled");
-    return;
-  }
-
   // Give the performance team a promise
   return new Promise((resolve, reject) => {
     locker.executeWhenDOMReady(() => {
       switch(locker.pageType) {
-        case "sectfront":
-          section.render(locker);
-          break;
         case "story":
-          story.render(locker);
+          // story.render(locker);
+          const subscriber = locker.user.isSubscriber();
+
+          config.load("/config/story.json").then(() => {
+            const cadence = subscriber ? 4 : 3;
+            zones.distribute(cadence);
+            zones.render();
+          });
+
+          story.cleanup();
           break;
         case "homepage":
-          homepage.render(locker);
+          config.load("/config/homepage.json").then(zones.render);
+          break;
+        case "sectfront":
+          config.load("/config/section.json").then(zones.render);
           break;
         default:
           reject("not a matching page type");
