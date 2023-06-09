@@ -68,6 +68,14 @@ const locker = {
     switch(val) {
       case "zones":
         window.mi.zones = window.mi.zones || {};
+
+        // Demo configs
+        window.mi.zones.config = {
+          homepage: "/config/homepage.json",
+          section: "/config/section.json",
+          story: "/config/story.json"
+        }
+
         return window.mi.zones;
       case "analytics":
         return {

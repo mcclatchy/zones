@@ -17,17 +17,17 @@
     <script type="module">
       import locker from "../locker.js";
       import distributeZones from "/index.js";
-      import { getValidInsertionPoints } from "/lib/zones.js";
 
       // Mimic the Yozons implementation
       distributeZones(locker).then(msg => { console.log(msg) });
 
-      // Demo-only show vips
-      const vips = getValidInsertionPoints();
-      vips.forEach(ele => ele.classList.add("vip"));
-
       // Listen for the loaded event
       window.addEventListener("zones-loaded", console.log("zones are loaded"));
+
+      // Demo-only show vips
+      import { getValidInsertionPoints } from "/lib/zones.js";
+      const vips = getValidInsertionPoints();
+      vips.forEach(ele => ele.classList.add("vip"));
     </script>
   </head>
 

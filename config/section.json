@@ -1,22 +1,6 @@
 {
   "zones": [
     {
-      "id": "zone-el-23",
-      "placement": null
-    },
-    {
-      "id": "zone-el-4",
-      "placement": null
-    },
-    {
-      "id": "zone-el-com-portal",
-      "placement": {
-        "type": "query",
-        "value": ".grid > :nth-child(3)"
-      },
-      "classList": ["two-columns", "two-rows"]
-    },
-    {
       "id": "zone-el-9",
       "filters": [
         {
@@ -26,37 +10,7 @@
       ],
       "placement": {
         "type": "query",
-        "value":  ".grid > :nth-child(5)"
-      }
-    },
-    {
-      "id": "zone-featured-carousel",
-      "classList": ["three-columns"],
-      "type": "editorial",
-      "filters": [
-        {
-          "type": "subscriber",
-          "value": true
-        }
-      ],
-      "zephr": {
-        "feature": "zone-featured-carousel",
-        "dataset": [
-          {
-            "type": "config",
-            "name": "taxonomy",
-            "value": "marketInfo.taxonomy"
-          },
-          {
-            "type": "config",
-            "name": "market",
-            "value": "marketInfo.domain"
-          }
-        ]
-      },
-      "placement": {
-        "type": "query",
-        "value": ".grid > :nth-child(10)"
+        "value":  ".grid > :nth-child(14)"
       }
     }
   ]
