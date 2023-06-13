@@ -24,6 +24,9 @@
       // Listen for the loaded event
       window.addEventListener("zones-loaded", console.log("zones are loaded"));
 
+      // Listen for the intersection event
+      window.addEventListener("zone", (e) => console.log("%s showing", e.detail.id));
+
       // Demo-only show vips
       import { getValidInsertionPoints } from "/lib/zones.js";
       const vips = getValidInsertionPoints();
