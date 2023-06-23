@@ -58,7 +58,7 @@ The zone object creates a new zone in the map.
 | id | the id attribute for the zone element |
 | type | the data-type attribute for the zone element |
 
-#### Placement object
+### Placement object
 
 These properties determine the placement of the zone. There are two options: add a zone relative to another zone already in the map, or add a zone before another element on the page using a query selector string. _Note, if referencing a zone already in the map the `#` is not required to select by id._
 
@@ -68,7 +68,7 @@ These properties determine the placement of the zone. There are two options: add
 | value | the id of the zone in the map, or the query string to use |
 
 
-#### Filter objects (optional)
+### Filter objects (optional)
 
 These properties will restrict the zone display based on Yozons configurations. All filters must be true for the zone to show. Negative values can be made true by setting the value to false. Some Yozons configurations return a Promise, which is why they've been separated into their own type.
 
@@ -79,7 +79,7 @@ These properties will restrict the zone display based on Yozons configurations. 
 | pattern | a regex pattern to match on string config values |
 | value | the boolean value of the configuration or regex match |
 
-#### Zephr object (optional)
+### Zephr object (optional)
 
 This object asks Zephr for a dynamic payload and passes any Yozons configuration values to help determine the correct payload.
 
