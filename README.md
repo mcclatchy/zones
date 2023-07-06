@@ -86,6 +86,7 @@ This object asks Zephr for a dynamic payload and passes any Yozons configuration
 | Property | Value |
 | --- | --- |
 | feature | the slug of the feature in Zephr |
-| dataset[].type | "subscriber" and "dma" send the boolean value, "config" makes a generic Yozons request | 
+| dataset[].type | "subscriber" and "dma" wait for promise resolution, "config" makes a generic Yozons request | 
 | dataset[].name | the custom input key sent to Zephr |
 | dataset[].config | the Yozons config value sent to Zephr |
+| dataset[].value | the generic value sent to Zephr if no type is declared | 
