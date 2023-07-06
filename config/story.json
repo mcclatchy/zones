@@ -26,28 +26,15 @@
       }
     },
     {
-      "id": "zone-featured-carousel",
+      "id": "zone-taboola-recommendations",
       "filters": [
-        {
-          "type": "subscriber",
-          "value": true
-        },
-        {
-          "type": "config",
-          "name": "zone.carousel",
-          "value": true
-        }
       ],
       "zephr": {
-        "feature": "zone-featured-carousel",
+        "feature": "zone-taboola-recommendations",
         "dataset": [
           {
-            "name": "taxonomy",
-            "config": "marketInfo.taxonomy"
-          },
-          {
-            "name": "market",
-            "config": "marketInfo.domain"
+            "name": "dma",
+            "value": true
           }
         ]
       },
