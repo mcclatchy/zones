@@ -38,8 +38,8 @@
         "feature": "zone-taboola-recommendations",
         "dataset": [
           {
-            "name": "dma",
-            "value": true
+            "type": "dma",
+            "name": "dma"
           }
         ]
       },
