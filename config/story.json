@@ -28,6 +28,11 @@
     {
       "id": "zone-taboola-recommendations",
       "filters": [
+        {
+          "type": "config",
+          "name": "zone.taboolaRecommendations",
+          "value": true
+        }
       ],
       "zephr": {
         "feature": "zone-taboola-recommendations",
