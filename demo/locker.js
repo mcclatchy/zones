@@ -25,8 +25,10 @@ const locker = {
       case "zone.zeeto":
         return true;
       case "zone.moneycom":
-        return true;
+        return false;
       case "zone.communityEvents":
+        return true;
+      case "zone.taboolaRecommendations":
         return true;
       default: 
         return undefined;
@@ -36,7 +38,7 @@ const locker = {
   // user info
   user: {
     isSubscriber() {
-      return true;
+      return false;
     },
 
     isLoggedIn() {
@@ -44,7 +46,7 @@ const locker = {
     },
 
     isInDMA() {
-      return Promise.resolve(true);
+      return Promise.resolve(false);
     }
   },
 
