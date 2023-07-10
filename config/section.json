@@ -12,6 +12,23 @@
         "type": "query",
         "value":  ".grid > :nth-child(14)"
       }
+    },
+    {
+      "id": "zone-el-amazon-prime-day",
+      "filters": [
+        {
+          "type": "config",
+          "name": "marketInfo.sourcelevel",
+          "value": "mcpshopping"
+        }
+      ],
+      "placement": {
+        "type": "query",
+        "value": ".grid > :nth-child(9)"
+      },
+      "zephr": {
+        "feature": "zone-amazon-prime-day"
+      }
     }
   ]
 }
