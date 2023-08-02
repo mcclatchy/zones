@@ -31,7 +31,7 @@ function distributeZones(locker) {
 
           // Change the cadence
           const subscriber = locker.user.isSubscriber();
-          const cadence = subscriber ? 4 : 3;
+          const cadence = subscriber ? 4 : 2;
           zones.distribute(cadence);
 
           // Temporary cleanup
