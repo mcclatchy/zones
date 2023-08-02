@@ -29,9 +29,12 @@ function distributeZones(locker) {
         case "story":
           await config.load(locker.config.story);
 
-          // Change the cadence
+          // Set cadence for subsriber vs. nonsubscriber - testing different cadence for two markets
           const subscriber = locker.user.isSubscriber();
-          const cadence = subscriber ? 4 : 2;
+          const domainName = locker.getConfig('domainName');
+          const allowedDomains = ["https://www.bnd.com/", "https://www.myrtlebeachonline.com/"];
+          const cadence = allowedDomains.includes(domainName) ? (subscriber ? 4 : 2) : (subscriber ? 4 : 3);
+
           zones.distribute(cadence);
 
           // Temporary cleanup
@@ -52,5 +55,8 @@ function distributeZones(locker) {
     });
   });
 }
+
+
+console.log(locker);
 
 export default distributeZones;
