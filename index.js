@@ -34,7 +34,7 @@ function distributeZones(locker) {
           const dma = subscriber ? true : await locker.user.isInDMA();
           const nonsubscriberOutOfMarket = !subscriber && !dma;
           const domainName = locker.getConfig('domainName');
-          const allowedDomains = ["https://www.bnd.com/", "https://www.myrtlebeachonline.com/"];
+          const allowedDomains = ["www.bnd.com", "www.myrtlebeachonline.com"];
           const cadence = allowedDomains.includes(domainName) && nonsubscriberOutOfMarket ? 2 : (subscriber ? 4 : 3);
 
           zones.distribute(cadence);
