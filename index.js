@@ -58,7 +58,4 @@ function distributeZones(locker) {
   });
 }
 
-
-console.log(locker);
-
 export default distributeZones;
