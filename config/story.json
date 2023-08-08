@@ -47,18 +47,6 @@
         "type": "after",
         "value": "zone-el-101"
       }
-    },
-    {
-      "id": "zone-el-102",
-      "filters": [
-        {
-          "type": "dma",
-          "value": true
-        }
-      ],
-      "placement": {
-        "type": "remove"
-      }
     }
   ]
 }
