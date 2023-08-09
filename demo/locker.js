@@ -15,7 +15,7 @@ const locker = {
   getConfig(key) {
     switch(key) {
       case "domainName":
-        return "www.charlotteobserver.com";
+        return "www.kansascity.com";
       case "articleCredit":
         return "The Kansas City Star";
       case "marketInfo.domain":
