@@ -27,10 +27,14 @@ const locker = {
       case "zone.zeeto":
         return true;
       case "zone.moneycom":
-        return true;
+        return false;
       case "zone.communityEvents":
         return true;
       case "zone.taboolaRecommendations":
+        return true;
+      case "zone.siTickets":
+        return true;
+      case "zone.gamecocksNav":
         return true;
       default: 
         return undefined;

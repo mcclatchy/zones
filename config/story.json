@@ -21,8 +21,8 @@
         "feature": "zone-moneycom"
       },
       "placement": {
-        "type": "after",
-        "value": "zone-el-101"
+        "type": "query",
+        "value": ".story-body"
       }
     },
     {
@@ -46,6 +46,36 @@
       "placement": {
         "type": "after",
         "value": "zone-el-101"
+      }
+    },
+    {
+      "id": "zone-si-tickets",
+      "cue": 278143207,
+      "filters": [
+        {
+          "type": "config",
+          "name": "zone.siTickets",
+          "value": true
+        }
+      ],
+      "placement": {
+        "type": "after",
+        "value": "zone-el-101"
+      }
+    },
+    {
+      "id": "zone-gamecocks-nav",
+      "cue": 278142507,
+      "filters": [
+        {
+          "type": "config",
+          "name": "zone.gamecocksNav",
+          "value": true
+        }
+      ],
+      "placement": {
+        "type": "query",
+        "value": ".story-body"
       }
     }
   ]
