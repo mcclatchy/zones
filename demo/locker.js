@@ -27,7 +27,7 @@ const locker = {
       case "zone.zeeto":
         return true;
       case "zone.moneycom":
-        return false;
+        return true;
       case "zone.communityEvents":
         return true;
       case "zone.taboolaRecommendations":
