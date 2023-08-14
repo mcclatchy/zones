@@ -21,8 +21,8 @@
         "feature": "zone-moneycom"
       },
       "placement": {
-        "type": "query",
-        "value": ".story-body"
+        "type": "after",
+        "value": "zone-el-101"
       }
     },
     {
