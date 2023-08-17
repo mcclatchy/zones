@@ -24,6 +24,60 @@
         "type": "query",
         "value": "#zone-el-5"
       }
+    },
+    {
+      "id": "zone-community-events",
+      "type": "editorial",
+      "notes": "duped for the new DOM",
+      "filters": [
+        {
+          "type": "config",
+          "name": "zone.communityEventsNew",
+          "value": true
+        }
+      ],
+      "zephr": {
+        "feature": "zone-community-events",
+        "dataset": [
+          {
+            "type": "config",
+            "name": "market",
+            "value": "marketInfo.domain"
+          }
+        ]
+      },
+      "placement": {
+        "type": "query",
+        "value": "#secondary-story-9"
+      }
+    },
+    {
+      "id": "zone-el-9",
+      "filters": [
+        {
+          "type": "config",
+          "name": "zone.communityEventsNew",
+          "value": true
+        }
+      ],
+      "placement": {
+        "type": "query",
+        "value": "#secondary-story-6"
+      }
+    },
+    {
+      "id": "zone-el-11",
+      "filters": [
+        {
+          "type": "config",
+          "name": "zone.communityEventsNew",
+          "value": true
+        }
+      ],
+      "placement": {
+        "type": "query",
+        "value": "#secondary-story-14"
+      }
     }
   ]
 }
