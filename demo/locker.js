@@ -31,11 +31,11 @@ const locker = {
       case "zone.communityEvents":
         return true;
       case "zone.taboolaRecommendations":
-        return true;
+        return false;
       case "zone.siTickets":
-        return true;
+        return false;
       case "zone.gamecocksNav":
-        return true;
+        return false;
       default: 
         return undefined;
     }
