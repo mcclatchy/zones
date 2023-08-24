@@ -77,6 +77,22 @@
         "type": "query",
         "value": ".story-body"
       }
+    },
+    {
+      "id": "zone-sponsored-article",
+      "cue": 277282728,
+      "filters": [
+        {
+          "type": "config",
+          "name": "zone.sponsoredArticle",
+          "value": true
+        }
+      ],
+      "placement": {
+        "type": "query",
+        "value": ".story-body > .header"
+      },
+      "classList": ["hidden"]
     }
   ]
 }
