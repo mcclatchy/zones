@@ -31,7 +31,7 @@ const locker = {
       case "zone.communityEvents":
         return true;
       case "zone.taboolaRecommendations":
-        return false;
+        return true;
       case "zone.siTickets":
         return false;
       case "zone.gamecocksNav":

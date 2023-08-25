@@ -3,10 +3,6 @@
   "ignore": ["zone-el-16"],
   "zones": [
     {
-      "id": "zone-el-101",
-      "tracking": true
-    },
-    {
       "id": "zone-moneycom",
       "filters": [
         {
@@ -50,7 +46,8 @@
       "placement": {
         "type": "after",
         "value": "zone-el-101"
-      }
+      },
+      "tracking": true
     },
     {
       "id": "zone-si-tickets",
