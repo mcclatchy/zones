@@ -3,29 +3,6 @@
   "ignore": ["zone-el-16"],
   "zones": [
     {
-      "id": "zone-moneycom",
-      "filters": [
-        {
-          "type": "config",
-          "name": "zone.moneycom",
-          "value": true
-        },
-        {
-          "type": "config",
-          "name": "articleCredit",
-          "pattern": "(Paradise Media|Bankrate)",
-          "value": false
-        }
-      ],
-      "zephr": {
-        "feature": "zone-moneycom"
-      },
-      "placement": {
-        "type": "after",
-        "value": "zone-el-101"
-      }
-    },
-    {
       "id": "zone-taboola-recommendations",
       "filters": [
         {
