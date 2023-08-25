@@ -22,10 +22,6 @@ const locker = {
         return "miamiherald";
       case "marketInfo.taxonomy":
         return "News/Sports//";
-      case "zone.carousel":
-        return true;
-      case "zone.zeeto":
-        return true;
       case "zone.moneycom":
         return false;
       case "zone.communityEvents":
@@ -33,8 +29,10 @@ const locker = {
       case "zone.taboolaRecommendations":
         return true;
       case "zone.siTickets":
-        return true;
+        return false;
       case "zone.gamecocksNav":
+        return false;
+      case "zone.sponsoredArticle":
         return true;
       default: 
         return undefined;

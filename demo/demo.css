@@ -2,7 +2,7 @@
  * Demo supplements
  */
 
-.card, .zone {
+.card {
   min-height: 300px;
 }
 
@@ -24,12 +24,12 @@
 
 [id^=zone-] {
   display: block !important;
-  min-height: 300px;
-  background-color: blue !important;
+  background-color: blue;
+  --ad-background: blue;
 }
 
 [id^=zone-][data-distributed] {
-  background-color: green !important;
+  background-color: green;
 }
 
 [id^=zone-]:before {
