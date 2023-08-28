@@ -32,7 +32,12 @@
       "filters": [
         {
           "type": "config",
-          "name": "zone.communityEventsNew",
+          "name": "zone.communityEvents",
+          "value": true
+        },
+        {
+          "type": "config",
+          "name": "zone.homepage2023",
           "value": true
         }
       ],
@@ -52,11 +57,27 @@
       }
     },
     {
+      "id": "homepage-fix",
+      "notes": "can be removed once SDS 1.16.15 is implemented",
+      "filters": [
+        {
+          "type": "config",
+          "name": "zone.homepage2023",
+          "value": true
+        }
+      ],
+      "cue": 278707554,
+      "placement": {
+        "type": "query",
+        "value": "footer"
+      }
+    },
+    {
       "id": "zone-el-9",
       "filters": [
         {
           "type": "config",
-          "name": "zone.communityEventsNew",
+          "name": "zone.homepage2023",
           "value": true
         }
       ],
@@ -70,13 +91,13 @@
       "filters": [
         {
           "type": "config",
-          "name": "zone.communityEventsNew",
+          "name": "zone.homepage2023",
           "value": true
         }
       ],
       "placement": {
         "type": "query",
-        "value": "#secondary-story-14"
+        "value": "#secondary-story-12"
       }
     }
   ]
