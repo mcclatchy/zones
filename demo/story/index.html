@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en" data-pagetype="story">
   <head>
-    <title>Zones section demo</title>
+    <title>Zones story demo</title>
     <link rel="icon" type="image/x-icon" href="https://www.kansascity.com/favicon.ico">
     
     <meta charset="UTF-8">
@@ -19,24 +19,24 @@
       import distributeZones from "/index.js";
 
       // Mimic the Yozons implementation
-      distributeZones(locker).then(msg => { console.log(msg) });
+      distributeZones(locker);
 
       // Listen for the loaded event
       window.addEventListener("zones-loaded", console.log("zones are loaded"));
 
       // Listen for the intersection event
-      window.addEventListener("zone", (e) => console.log("%s showing", e.detail.id));
+      window.addEventListener("zone", (e) => console.log("zone showing: %s", JSON.stringify(e.detail)));
+
+      // Listen for tracking events
+      window.addEventListener("trackcustomzones", (e) => console.log("zone tracked: %s", JSON.stringify(e.detail)));
 
       // Demo-only show vips
       import { getValidInsertionPoints } from "/lib/zones.js";
-      const vips = getValidInsertionPoints();
-      vips.forEach(ele => ele.classList.add("vip"));
+      getValidInsertionPoints().forEach(ele => ele.classList.add("vip"));
     </script>
   </head>
 
   <body>
-    <!-- <div id="zone-el-1"></div> -->
-    <!-- <div id="zone-el-2"></div> -->
     <div class="card flag"></div>
 
     <article class="paper story-body">
