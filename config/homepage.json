@@ -22,65 +22,11 @@
       },
       "placement": {
         "type": "query",
-        "value": "#zone-el-5"
-      }
-    },
-    {
-      "id": "zone-community-events",
-      "type": "editorial",
-      "notes": "duped for the new DOM",
-      "filters": [
-        {
-          "type": "config",
-          "name": "zone.communityEvents",
-          "value": true
-        },
-        {
-          "type": "config",
-          "name": "zone.homepage2023",
-          "value": true
-        }
-      ],
-      "zephr": {
-        "feature": "zone-community-events",
-        "dataset": [
-          {
-            "type": "config",
-            "name": "market",
-            "value": "marketInfo.domain"
-          }
-        ]
-      },
-      "placement": {
-        "type": "query",
         "value": "#secondary-story-9"
       }
     },
     {
-      "id": "homepage-fix",
-      "notes": "can be removed once SDS 1.16.15 is implemented",
-      "filters": [
-        {
-          "type": "config",
-          "name": "zone.homepage2023",
-          "value": true
-        }
-      ],
-      "cue": 278707554,
-      "placement": {
-        "type": "query",
-        "value": "footer"
-      }
-    },
-    {
       "id": "zone-el-9",
-      "filters": [
-        {
-          "type": "config",
-          "name": "zone.homepage2023",
-          "value": true
-        }
-      ],
       "placement": {
         "type": "query",
         "value": "#secondary-story-6"
@@ -88,13 +34,6 @@
     },
     {
       "id": "zone-el-11",
-      "filters": [
-        {
-          "type": "config",
-          "name": "zone.homepage2023",
-          "value": true
-        }
-      ],
       "placement": {
         "type": "query",
         "value": "#secondary-story-10"
