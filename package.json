@@ -1,6 +1,6 @@
 {
   "name": "@mcclatchy/zones",
-  "version": "1.6.0",
+  "version": "1.6.1",
   "description": "A Yozons extension to dynamically distribute or re-distribute zones on the websites.",
   "main": "index.js",
   "directories": {
