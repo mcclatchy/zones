@@ -1,6 +1,11 @@
 {
   "base": ".story-body [id^=zone-el]",
   "ignore": ["zone-el-16"],
+  "cadence": {
+    "subscriber": 4,
+    "dma": 3,
+    "standard": 2
+  },
   "zones": [
     {
       "id": "zone-taboola-recommendations",
