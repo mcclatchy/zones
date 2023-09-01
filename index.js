@@ -31,12 +31,7 @@ function distributeZones(locker) {
 
           // Set cadence for subscriber vs. nonsubscriber vs. nonsubscriber out of market in test domains
           const subscriber = locker.user.isSubscriber();
-          const dma = subscriber ? true : await locker.user.isInDMA();
-          const nonsubscriberOutOfMarket = !subscriber && !dma;
-          const domainName = locker.getConfig('domainName');
-          const allowedDomains = ["www.bnd.com", "www.myrtlebeachonline.com"];
-          const cadence = allowedDomains.includes(domainName) && nonsubscriberOutOfMarket ? 2 : (subscriber ? 4 : 3);
-
+          const cadence = subscriber ? 4 : 2;
           zones.distribute(cadence);
 
           // Temporary cleanup
