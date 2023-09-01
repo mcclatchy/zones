@@ -42,7 +42,7 @@ const locker = {
   // user info
   user: {
     isSubscriber() {
-      return false;
+      return true;
     },
 
     isLoggedIn() {
@@ -50,7 +50,7 @@ const locker = {
     },
 
     isInDMA() {
-      return Promise.resolve(true);
+      return Promise.resolve(false);
     }
   },
 

@@ -10,11 +10,11 @@ function distributeZones(locker) {
   // Setup
   zones.setLocker(locker);
 
-  // Configs 
+  // Config files 
   if(!locker.config) {
     locker.config = {
       homepage: "/static/hi/zones/homepage.json",
-      section: "/static/hi/zones/section.json",
+      sectfront: "/static/hi/zones/section.json",
       story: "/static/hi/zones/story.json"
     }
   }
@@ -25,28 +25,22 @@ function distributeZones(locker) {
   // Give the performance team a promise
   return new Promise((resolve, reject) => {
     locker.executeWhenDOMReady(async () => {
-      switch(locker.pageType) {
-        case "story":
-          await config.load(locker.config.story);
+      // Config keys match pageType coming from Yozons
+      const file = locker.config[locker.pageType];
 
-          // Set cadence for subscriber vs. nonsubscriber vs. nonsubscriber out of market in test domains
-          const subscriber = locker.user.isSubscriber();
-          const cadence = subscriber ? 4 : 2;
-          zones.distribute(cadence);
-
-          // Temporary cleanup
-          story.cleanup();
-          break;
-        case "homepage":
-          await config.load(locker.config.homepage);
-          break;
-        case "sectfront":
-          await config.load(locker.config.section);
-          break;
-        default:
-          reject("not a matching page type");
+      // Load config file
+      if(file) {
+        await config.load(file);
+      } else {
+        reject("not a matching page type");
       }
 
+      // Temporary cleanup
+      if(locker.pageType == "story") {
+        story.cleanup();
+      }
+
+      // Render and resolve
       zones.render();
       resolve("zones-loaded")
     });
