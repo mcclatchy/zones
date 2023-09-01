@@ -76,6 +76,36 @@
         "value": ".story-body > .header"
       },
       "classList": ["hidden"]
+    },
+    {
+      "id": "zone-local-news-digest",
+      "tracking": true,
+      "filters": [
+        {
+          "type": "config",
+          "name": "zone.localNewsDigest",
+          "value": true
+        },
+        {
+          "type": "dma",
+          "value": true
+        }
+      ],
+      "zephr": {
+        "feature": "zone-local-news-digest",
+        "dataset": [
+          {
+            "type": "config",
+            "name": "domain",
+            "value": "marketInfo.domain"
+          }
+        ]
+      },
+      "placement": {
+        "type": "after",
+        "value": "zone-el-101"
+      },
+      "classList": ["stn-player"]
     }
   ]
 }
