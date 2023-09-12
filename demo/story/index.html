@@ -19,7 +19,9 @@
       import distributeZones from "/index.js";
 
       // Mimic the Yozons implementation
-      distributeZones(locker);
+      distributeZones(locker)
+        .then(() => { console.log("zones: clean render") })
+        .catch((e) => { console.warn(e) });
 
       // Listen for the loaded event
       window.addEventListener("zones-loaded", console.log("zones are loaded"));
