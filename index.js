@@ -26,13 +26,17 @@ function distributeZones(locker) {
   return new Promise((resolve, reject) => {
     locker.executeWhenDOMReady(async () => {
       // Config keys match pageType coming from Yozons
-      const file = locker.config[locker.pageType];
+      const match = locker.config[locker.pageType];
 
       // Load config file
-      if(file) {
-        await config.load(file);
+      if(match) {
+        try {
+          await config.load(match);
+        } catch(e) {
+          reject(e);
+        }
       } else {
-        reject("not a matching page type");
+        reject("zones: not a matching page type");
       }
 
       // Temporary cleanup
