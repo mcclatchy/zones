@@ -113,8 +113,8 @@
       "filters": [
         {
           "type": "config",
-          "name": "sectionID",
-          "value": "43881"
+          "name": "zone.lexgoEatSponsor",
+          "value": true
         }
       ],
       "placement": {

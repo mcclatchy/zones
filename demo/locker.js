@@ -34,6 +34,8 @@ const locker = {
         return false;
       case "zone.sponsoredArticle":
         return true;
+      case "zone.lexgoEatSponsor":
+        return true;
       default: 
         return undefined;
     }
