@@ -106,6 +106,21 @@
         "value": "zone-el-101"
       },
       "classList": ["stn-player"]
+    },
+    {
+      "id": "zone-lexgoeat-sponsor",
+      "cue": 266575046,
+      "filters": [
+        {
+          "type": "config",
+          "name": "sectionID",
+          "value": "43881"
+        }
+      ],
+      "placement": {
+        "type": "query",
+        "value": ".story-body" 
+      }
     }
   ]
 }
