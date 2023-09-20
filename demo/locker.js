@@ -27,14 +27,16 @@ const locker = {
       case "zone.communityEvents":
         return true;
       case "zone.taboolaRecommendations":
-        return true;
+        return false;
       case "zone.siTickets":
         return false;
       case "zone.gamecocksNav":
         return false;
       case "zone.sponsoredArticle":
-        return true;
+        return false;
       case "zone.lexgoEatSponsor":
+        return false;
+      case "zone.localNewsDigest":
         return true;
       default: 
         return undefined;
@@ -44,7 +46,7 @@ const locker = {
   // user info
   user: {
     isSubscriber() {
-      return true;
+      return false;
     },
 
     isLoggedIn() {
@@ -52,7 +54,7 @@ const locker = {
     },
 
     isInDMA() {
-      return Promise.resolve(false);
+      return Promise.resolve(true);
     }
   },
 
@@ -95,7 +97,7 @@ const locker = {
   // Demo only for now
   config: {
     homepage: "/config/homepage.json",
-    section: "/config/section.json",
+    sectfront: "/config/section.json",
     story: "/config/story.json"
   }
 }

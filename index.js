@@ -6,9 +6,13 @@ import * as zones from "./lib/zones.js";
 import * as config from "./lib/config.js";
 import * as story from "./lib/story.js";
 
-function distributeZones(locker) {
+async function distributeZones(locker) {
+  const subscriber = locker.user.isSubscriber();
+
   // Setup
   zones.setLocker(locker);
+  zones.setConfig("subscriber", subscriber);
+  zones.setConfig("dma", subscriber ? true : await locker.user.isInDMA());
 
   // Config files 
   if(!locker.config) {

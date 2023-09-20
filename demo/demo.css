@@ -6,6 +6,10 @@
   min-height: 300px;
 }
 
+.digest {
+  min-height: 600px;
+}
+
 .lead-item {
   min-height: 600px;
 }
