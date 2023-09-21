@@ -24,13 +24,13 @@
         .catch((e) => { console.warn(e) });
 
       // Listen for the loaded event
-      window.addEventListener("zones-loaded", console.log("zones are loaded"));
+      // window.addEventListener("zones-loaded", console.log("zones are loaded"));
 
       // Listen for the intersection event
-      window.addEventListener("zone", (e) => console.log("zone showing: %s", JSON.stringify(e.detail)));
+      // window.addEventListener("zone", (e) => console.log("zone showing: %s", JSON.stringify(e.detail)));
 
       // Listen for tracking events
-      window.addEventListener("trackcustomzones", (e) => console.log("zone tracked: %s", JSON.stringify(e.detail)));
+      // window.addEventListener("trackcustomzones", (e) => console.log("zone tracked: %s", JSON.stringify(e.detail)));
 
       // Demo-only show vips
       import { getValidInsertionPoints } from "/lib/zones.js";

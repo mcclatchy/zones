@@ -8,12 +8,20 @@
   },
   "zones": [
     {
+      "id": "zone-el-101",
+      "targeting": {
+        "atf": true
+      }
+    },
+    {
       "id": "zone-el-1",
       "vip": ".flag",
       "position": "afterend",
       "filters": {
-        "subscriber": false,
-        "zone.sponsoredArticle": false
+        "subscriber": false
+      },
+      "targeting": {
+        "memo": "customized in the config"
       }
     },
     {
