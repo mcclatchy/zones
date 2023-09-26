@@ -2,15 +2,9 @@
   "zones": [
     {
       "id": "zone-el-9",
-      "filters": [
-        {
-          "type": "subscriber",
-          "value": false
-        }
-      ],
-      "placement": {
-        "type": "query",
-        "value":  ".grid > :nth-child(14)"
+      "vip": ".grid > :nth-child(14)",
+      "filters": {
+        "subscriber": false
       }
     }
   ]

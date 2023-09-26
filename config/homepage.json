@@ -2,42 +2,23 @@
   "zones": [
     {
       "id": "zone-community-events",
+      "vip": "#secondary-story-9",
       "type": "editorial",
-      "filters": [
-        {
-          "type": "config",
-          "name": "zone.communityEvents",
-          "value": true
-        }
-      ],
+      "filters": {
+        "zone.communityEvents": true
+      },
       "zephr": {
         "feature": "zone-community-events",
-        "dataset": [
-          {
-            "type": "config",
-            "name": "market",
-            "value": "marketInfo.domain"
-          }
-        ]
-      },
-      "placement": {
-        "type": "query",
-        "value": "#secondary-story-9"
+        "dataset": ["marketInfo.domain"]
       }
     },
     {
       "id": "zone-el-9",
-      "placement": {
-        "type": "query",
-        "value": "#secondary-story-6"
-      }
+      "vip": "#seconddary-story-6"
     },
     {
       "id": "zone-el-11",
-      "placement": {
-        "type": "query",
-        "value": "#secondary-story-10"
-      }
+      "vip": "#secondary-story-10"
     }
   ]
 }
