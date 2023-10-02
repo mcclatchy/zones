@@ -37,7 +37,7 @@ const locker = {
       case "zone.lexgoEatSponsor":
         return false;
       case "zone.localNewsDigest":
-        return true;
+        return false;
       default: 
         return undefined;
     }
@@ -90,8 +90,18 @@ const locker = {
     }
   },
 
+  // ad logic coming from Yozoons (proposed)
   areAdsAllowed() {
     return true;
+  },
+
+  createAdTag(targeting) {
+    let tag = document.createElement("div");
+
+    tag.classList.add("ad");
+    tag.setAttribute("targeting", JSON.stringify(targeting));
+
+    return tag;
   },
 
   // Demo only for now
