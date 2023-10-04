@@ -24,7 +24,9 @@ async function distributeZones(locker) {
   }
 
   // Add the communication bridge 
-  locker.getYozonsLocker("zones").changes = zones.changes;
+  // locker.getYozonsLocker("zones").changes = zones.changes;
+  window.mi = window.mi || {};
+  window.mi.zones = zones.getPublicAPI();
 
   // Give the performance team a promise
   return new Promise((resolve, reject) => {

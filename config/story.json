@@ -10,7 +10,7 @@
     {
       "id": "zone-el-101",
       "targeting": {
-        "atf": true
+        "pkg": "b"
       }
     },
     {
@@ -21,7 +21,7 @@
         "subscriber": false
       },
       "targeting": {
-        "memo": "customized in the config"
+        "atf": "y"
       }
     },
     {

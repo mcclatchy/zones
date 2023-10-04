@@ -2,6 +2,8 @@
  * This is a fake Yozons locker for development
  */
 
+import * as ads from "./ads.js";
+
 const locker = {
   pageType: document.documentElement.dataset.pagetype,
   template: document.documentElement.dataset.template,
@@ -58,6 +60,10 @@ const locker = {
     }
   },
 
+  areAdsAllowed() {
+    return true;
+  },
+
   // utility for timing
   executeWhenDOMReady(callback, state = document.readyState) {
     if (callback && typeof callback === 'function') {
@@ -72,10 +78,10 @@ const locker = {
   },
 
   // mimic locker functionality
-  getYozonsLocker(val) {
+  getYozonsLocker(key) {
     window.mi = window.mi || {};
 
-    switch(val) {
+    switch(key) {
       case "zones":
         window.mi.zones = window.mi.zones || {};
         return window.mi.zones;
@@ -90,18 +96,12 @@ const locker = {
     }
   },
 
-  // ad logic coming from Yozoons (proposed)
-  areAdsAllowed() {
-    return true;
-  },
-
-  createAdTag(targeting) {
-    let tag = document.createElement("div");
-
-    tag.classList.add("ad");
-    tag.setAttribute("targeting", JSON.stringify(targeting));
-
-    return tag;
+  // API functionality (proposed)
+  getAPI(key) {
+    switch(key) {
+      case "ads":
+        return ads;
+    }
   },
 
   // Demo only for now
