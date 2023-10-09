@@ -64,6 +64,26 @@
         "type": "query",
         "value": "#secondary-story-7"
       }
+    },
+    {
+      "id": "zone-editor-picks",
+      "cue": 280305494,
+      "classList": ["three-columns"],
+      "filters": [
+        {
+          "type": "subscriber",
+          "value": true
+        },
+        {
+          "type": "config",
+          "name": "zone.editorPicks",
+          "value": true
+        }
+      ],
+      "placement": {
+        "type": "query",
+        "value": "#secondary-story-3"
+      }
     }
   ]
 }
