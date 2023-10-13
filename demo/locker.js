@@ -56,7 +56,7 @@ const locker = {
     },
 
     isInDMA() {
-      return Promise.resolve(true);
+      return Promise.resolve(false);
     }
   },
 

@@ -8,6 +8,11 @@
   },
   "zones": [
     {
+      "id": "zone-el-102",
+      "cue": 280305494,
+      "loading": "lazy"
+    },
+    {
       "id": "zone-el-101",
       "targeting": {
         "pkg": "b"
