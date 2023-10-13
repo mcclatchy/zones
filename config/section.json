@@ -12,22 +12,6 @@
         "type": "query",
         "value":  ".grid > :nth-child(14)"
       }
-    },
-    {
-      "id": "zone-amazon-prime",
-      "cue": 277182383,
-      "classList": ["three-columns"],
-      "filters": [
-        {
-          "type": "config",
-          "name": "marketInfo.sourcelevel",
-          "value": "mcpshopping"
-        }
-      ],
-      "placement": {
-        "type": "query",
-        "value": "#secondary-story-2"
-      }
     }
   ]
 }
