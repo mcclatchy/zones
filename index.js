@@ -24,7 +24,6 @@ async function distributeZones(locker) {
   }
 
   // Add the communication bridge 
-  // locker.getYozonsLocker("zones").changes = zones.changes;
   window.mi = window.mi || {};
   window.mi.zones = zones.getPublicAPI();
 

@@ -39,7 +39,7 @@ const locker = {
       case "zone.lexgoEatSponsor":
         return false;
       case "zone.localNewsDigest":
-        return false;
+        return true;
       default: 
         return undefined;
     }
@@ -56,7 +56,7 @@ const locker = {
     },
 
     isInDMA() {
-      return Promise.resolve(false);
+      return Promise.resolve(true);
     }
   },
 
