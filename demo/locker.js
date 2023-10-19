@@ -16,30 +16,32 @@ const locker = {
   // generic pageInfo getter
   getConfig(key) {
     switch(key) {
-      case "domainName":
-        return "www.kansascity.com";
       case "articleCredit":
         return "The Kansas City Star";
+      case "domainName":
+        return "www.kansascity.com";
       case "marketInfo.domain":
         return "miamiherald";
       case "marketInfo.taxonomy":
         return "News/Sports//";
-      case "zone.moneycom":
-        return false;
       case "zone.communityEvents":
-        return true;
-      case "zone.taboolaRecommendations":
         return false;
-      case "zone.siTickets":
+      case "zone.editorPicks":
+        return false;
+      case "zone.eventsCalendar":
         return false;
       case "zone.gamecocksNav":
         return false;
-      case "zone.sponsoredArticle":
-        return false;
       case "zone.lexgoEatSponsor":
-        return false;
+        return true;
       case "zone.localNewsDigest":
         return true;
+      case "zone.siTickets":
+        return false;
+      case "zone.sponsoredArticle":
+        return true;
+      case "zone.taboolaRecommendations":
+        return false;
       default: 
         return undefined;
     }
@@ -48,7 +50,7 @@ const locker = {
   // user info
   user: {
     isSubscriber() {
-      return false;
+      return true;
     },
 
     isLoggedIn() {

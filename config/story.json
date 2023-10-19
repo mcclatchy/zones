@@ -8,28 +8,6 @@
   },
   "zones": [
     {
-      "id": "zone-el-102",
-      "cue": 280305494,
-      "loading": "lazy"
-    },
-    {
-      "id": "zone-el-101",
-      "targeting": {
-        "pkg": "b"
-      }
-    },
-    {
-      "id": "zone-el-1",
-      "vip": ".flag",
-      "position": "afterend",
-      "filters": {
-        "subscriber": false
-      },
-      "targeting": {
-        "atf": "y"
-      }
-    },
-    {
       "id": "zone-taboola-recommendations",
       "after": "zone-el-101",
       "tracking": true,
@@ -43,8 +21,8 @@
     },
     {
       "id": "zone-si-tickets",
-      "cue": 278143207,
       "after": "zone-el-101",
+      "cue": 278143207,
       "filters": {
         "zone.siTickets": true
       }
@@ -59,26 +37,11 @@
     },
     {
       "id": "zone-sponsored-article",
-      "cue": 277282728,
       "vip": ".story-body > .header",
+      "cue": 277282728,
       "classList": ["hidden"],
       "filters": {
         "zone.sponsoredArticle": true
-      }
-    },
-    {
-      "id": "zone-local-news-digest",
-      "tracking": true,
-      "after": "zone-el-101",
-      "classList": ["stn-player"],
-      "style": "max-width: var(--section-width); min-height: 300px; background-color: purple",
-      "filters": {
-        "dma": true,
-        "zone.localNewsDigest": true
-      },
-      "zephr": {
-        "feature": "zone-local-news-digest",
-        "dataset": ["marketInfo.domain"]
       }
     },
     {

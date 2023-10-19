@@ -1,6 +1,16 @@
 {
   "zones": [
     {
+      "id": "zone-el-9",
+      "vip": "#secondary-story-6",
+      "type": "ad"
+    },
+    {
+      "id": "zone-el-11",
+      "vip": "#secondary-story-10",
+      "type": "ad"
+    },
+    {
       "id": "zone-community-events",
       "vip": "#secondary-story-9",
       "type": "editorial",
@@ -13,12 +23,27 @@
       }
     },
     {
-      "id": "zone-el-9",
-      "vip": "#seconddary-story-6"
+      "id": "zone-events-calendar",
+      "vip": "#secondary-story-7",
+      "type": "editorial",
+      "classList": ["package", "paper", "two-columns", "two-rows"],
+      "filters": {
+        "zone.eventsCalendar": true
+      },
+      "zephr": {
+        "feature": "zone-events-calendar",
+        "dataset": ["marketInfo.domain"]
+      }
     },
     {
-      "id": "zone-el-11",
-      "vip": "#secondary-story-10"
+      "id": "zone-editor-picks",
+      "vip": "#secondary-story-3",
+      "cue": 280305494,
+      "classList": ["three-columns"],
+      "filters": {
+        "subscriber": true,
+        "zone.editorPicks": true
+      }
     }
   ]
 }

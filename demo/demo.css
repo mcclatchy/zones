@@ -44,6 +44,10 @@
   font: bold 1rem var(--sans);
 }
 
+[data-type="ad"]:before {
+  padding: 0 15px;
+}
+
 /*
  * Story stuff
  */
