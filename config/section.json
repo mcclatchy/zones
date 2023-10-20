@@ -3,6 +3,7 @@
     {
       "id": "zone-el-9",
       "vip": ".grid > :nth-child(14)",
+      "type": "ad",
       "filters": {
         "subscriber": false
       }

@@ -13,7 +13,6 @@
     {
       "id": "zone-community-events",
       "vip": "#secondary-story-9",
-      "type": "editorial",
       "filters": {
         "zone.communityEvents": true
       },
@@ -25,7 +24,6 @@
     {
       "id": "zone-events-calendar",
       "vip": "#secondary-story-7",
-      "type": "editorial",
       "classList": ["package", "paper", "two-columns", "two-rows"],
       "filters": {
         "zone.eventsCalendar": true
