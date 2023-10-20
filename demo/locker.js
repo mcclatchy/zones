@@ -28,7 +28,7 @@ const locker = {
         return false;
       case "zone.editorPicks":
         return false;
-      case "zone.eventsCalendar":
+      case "zone-events-calendar":
         return false;
       case "zone.gamecocksNav":
         return false;

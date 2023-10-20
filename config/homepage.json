@@ -26,7 +26,7 @@
       "vip": "#secondary-story-7",
       "classList": ["package", "paper", "two-columns", "two-rows"],
       "filters": {
-        "zone.eventsCalendar": true
+        "zone-events-calendar": true
       },
       "zephr": {
         "feature": "zone-events-calendar",
