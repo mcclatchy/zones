@@ -42,7 +42,7 @@
     {
       "id": "zone-events-calendar",
       "type": "editorial",
-      "classList": ["package", "paper", "two-columns", "two-rows"],
+      "classList": ["paper", "two-columns", "two-rows"],
       "filters": [
         {
           "type": "config",
