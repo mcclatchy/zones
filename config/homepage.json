@@ -42,52 +42,6 @@
         "subscriber": true,
         "zone.editorPicks": true
       }
-    },
-    {
-      "id": "zone-events-calendar",
-      "type": "editorial",
-      "classList": ["paper", "two-columns", "two-rows"],
-      "filters": [
-        {
-          "type": "config",
-          "name": "zone-events-calendar",
-          "value": true
-        }
-      ],
-      "zephr": {
-        "feature": "zone-events-calendar",
-        "dataset": [
-          {
-            "type": "config",
-            "name": "marketInfo.domain",
-            "value": "marketInfo.domain"
-          }
-        ]
-      },
-      "placement": {
-        "type": "query",
-        "value": "#secondary-story-7"
-      }
-    },
-    {
-      "id": "zone-editor-picks",
-      "cue": 280305494,
-      "classList": ["three-columns"],
-      "filters": [
-        {
-          "type": "subscriber",
-          "value": true
-        },
-        {
-          "type": "config",
-          "name": "zone.editorPicks",
-          "value": true
-        }
-      ],
-      "placement": {
-        "type": "query",
-        "value": "#secondary-story-3"
-      }
     }
   ]
 }
