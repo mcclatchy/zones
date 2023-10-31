@@ -24,7 +24,7 @@
     {
       "id": "zone-events-calendar",
       "vip": "#secondary-story-7",
-      "classList": ["package", "paper", "two-columns", "two-rows"],
+      "classList": ["paper", "two-columns", "two-rows"],
       "filters": {
         "zone-events-calendar": true
       },
