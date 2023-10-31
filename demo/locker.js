@@ -2,6 +2,8 @@
  * This is a fake Yozons locker for development
  */
 
+import * as ads from "./ads.js";
+
 const locker = {
   pageType: document.documentElement.dataset.pagetype,
   template: document.documentElement.dataset.template,
@@ -14,28 +16,32 @@ const locker = {
   // generic pageInfo getter
   getConfig(key) {
     switch(key) {
-      case "domainName":
-        return "www.kansascity.com";
       case "articleCredit":
         return "The Kansas City Star";
+      case "domainName":
+        return "www.kansascity.com";
       case "marketInfo.domain":
         return "miamiherald";
       case "marketInfo.taxonomy":
         return "News/Sports//";
-      case "zone.moneycom":
-        return false;
       case "zone.communityEvents":
-        return true;
-      case "zone.taboolaRecommendations":
-        return true;
-      case "zone.siTickets":
+        return false;
+      case "zone.editorPicks":
+        return false;
+      case "zone-events-calendar":
         return false;
       case "zone.gamecocksNav":
         return false;
-      case "zone.sponsoredArticle":
-        return true;
       case "zone.lexgoEatSponsor":
         return true;
+      case "zone.localNewsDigest":
+        return true;
+      case "zone.siTickets":
+        return false;
+      case "zone.sponsoredArticle":
+        return true;
+      case "zone.taboolaRecommendations":
+        return false;
       default: 
         return undefined;
     }
@@ -52,8 +58,12 @@ const locker = {
     },
 
     isInDMA() {
-      return Promise.resolve(false);
+      return Promise.resolve(true);
     }
+  },
+
+  areAdsAllowed() {
+    return true;
   },
 
   // utility for timing
@@ -70,10 +80,10 @@ const locker = {
   },
 
   // mimic locker functionality
-  getYozonsLocker(val) {
+  getYozonsLocker(key) {
     window.mi = window.mi || {};
 
-    switch(val) {
+    switch(key) {
       case "zones":
         window.mi.zones = window.mi.zones || {};
         return window.mi.zones;
@@ -88,14 +98,18 @@ const locker = {
     }
   },
 
-  areAdsAllowed() {
-    return true;
+  // API functionality (proposed)
+  getAPI(key) {
+    switch(key) {
+      case "ads":
+        return ads;
+    }
   },
 
   // Demo only for now
   config: {
     homepage: "/config/homepage.json",
-    section: "/config/section.json",
+    sectfront: "/config/section.json",
     story: "/config/story.json"
   }
 }

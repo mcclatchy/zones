@@ -6,6 +6,10 @@
   min-height: 300px;
 }
 
+.digest {
+  min-height: 600px;
+}
+
 .lead-item {
   min-height: 600px;
 }
@@ -38,6 +42,10 @@
   padding: 15px;
   color: white;
   font: bold 1rem var(--sans);
+}
+
+[data-type="ad"]:before {
+  padding: 0 15px;
 }
 
 /*

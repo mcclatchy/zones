@@ -6,9 +6,13 @@ import * as zones from "./lib/zones.js";
 import * as config from "./lib/config.js";
 import * as story from "./lib/story.js";
 
-function distributeZones(locker) {
+async function distributeZones(locker) {
+  const subscriber = locker.user.isSubscriber();
+
   // Setup
   zones.setLocker(locker);
+  zones.setConfig("subscriber", subscriber);
+  zones.setConfig("dma", subscriber ? true : await locker.user.isInDMA());
 
   // Config files 
   if(!locker.config) {
@@ -20,7 +24,8 @@ function distributeZones(locker) {
   }
 
   // Add the communication bridge 
-  locker.getYozonsLocker("zones").changes = zones.changes;
+  window.mi = window.mi || {};
+  window.mi.zones = zones.getPublicAPI();
 
   // Give the performance team a promise
   return new Promise((resolve, reject) => {

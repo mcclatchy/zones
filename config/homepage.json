@@ -1,42 +1,46 @@
 {
   "zones": [
     {
-      "id": "zone-community-events",
-      "type": "editorial",
-      "filters": [
-        {
-          "type": "config",
-          "name": "zone.communityEvents",
-          "value": true
-        }
-      ],
-      "zephr": {
-        "feature": "zone-community-events",
-        "dataset": [
-          {
-            "type": "config",
-            "name": "market",
-            "value": "marketInfo.domain"
-          }
-        ]
-      },
-      "placement": {
-        "type": "query",
-        "value": "#secondary-story-9"
-      }
-    },
-    {
       "id": "zone-el-9",
-      "placement": {
-        "type": "query",
-        "value": "#secondary-story-6"
-      }
+      "vip": "#secondary-story-6",
+      "type": "ad"
     },
     {
       "id": "zone-el-11",
-      "placement": {
-        "type": "query",
-        "value": "#secondary-story-10"
+      "vip": "#secondary-story-10",
+      "type": "ad"
+    },
+    {
+      "id": "zone-community-events",
+      "vip": "#secondary-story-9",
+      "filters": {
+        "zone.communityEvents": true
+      },
+      "zephr": {
+        "feature": "zone-community-events",
+        "dataset": ["marketInfo.domain"]
+      }
+    },
+    {
+      "id": "zone-events-calendar",
+      "vip": "#secondary-story-7",
+      "classList": ["package", "paper", "two-columns", "two-rows"],
+      "filters": {
+        "zone-events-calendar": true
+      },
+      "zephr": {
+        "feature": "zone-events-calendar",
+        "dataset": ["marketInfo.domain"]
+      }
+    },
+    {
+      "id": "zone-editor-picks",
+      "vip": "#secondary-story-3",
+      "cue": 280305494,
+      "classList": ["three-columns"],
+      "filters": {
+        "subscriber": true,
+        "zone.editorPicks": true
       }
     },
     {
