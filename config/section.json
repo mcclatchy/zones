@@ -7,6 +7,15 @@
       "filters": {
         "subscriber": false
       }
+    },
+    {
+      "id": "zone-amazon-prime",
+      "cue": 277182383,
+      "classList": ["three-columns"],
+      "vip": "#secondary-story-4",
+      "filters": {
+        "marketInfo.sourcelevel": "mcpshopping"
+      }
     }
   ]
 }
