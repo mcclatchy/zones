@@ -4,7 +4,7 @@
   "cadence": {
     "subscriber": 4,
     "dma": 3,
-    "standard": 2
+    "standard": 3
   },
   "zones": [
     {
