@@ -39,7 +39,6 @@
       "id": "zone-sponsored-article",
       "vip": ".story-body > .header",
       "cue": 277282728,
-      "classList": ["hidden"],
       "filters": {
         "zone.sponsoredArticle": true
       }
