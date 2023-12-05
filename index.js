@@ -25,7 +25,8 @@ async function distributeZones(locker) {
 
   // Add the communication bridge 
   window.mi = window.mi || {};
-  window.mi.zones = zones.getPublicAPI();
+  window.mi.zones = window.mi.zones || {};
+  window.mi.zones = Object.assign(window.mi.zones, zones.getPublicAPI());
 
   // Give the performance team a promise
   return new Promise((resolve, reject) => {
