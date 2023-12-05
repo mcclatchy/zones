@@ -17,14 +17,6 @@
       }
     },
     {
-      "id": "zone-si-tickets",
-      "after": "zone-el-101",
-      "cue": 278143207,
-      "filters": {
-        "zone.siTickets": true
-      }
-    },
-    {
       "id": "zone-gamecocks-nav",
       "vip": ".story-body",
       "cue": 278142507,
