@@ -8,6 +8,18 @@
   },
   "zones": [
     {
+      "id": "zone-taboola-recommendations",
+      "after": "zone-el-101",
+      "tracking": true,      
+      "filters": {
+        "zone.taboolaRecommendations": true
+      },
+      "zephr": {
+        "feature": "zone-taboola-recommendations",
+        "dataset": ["dma"]
+      }
+    },
+    {
       "id": "zone-gamecocks-nav",
       "vip": ".story-body",
       "cue": 278142507,
