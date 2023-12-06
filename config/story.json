@@ -10,18 +10,13 @@
     {
       "id": "zone-taboola-recommendations",
       "after": "zone-el-101",
-      "tracking": true,
+      "tracking": true,      
+      "filters": {
+        "zone.taboolaRecommendations": true
+      },
       "zephr": {
         "feature": "zone-taboola-recommendations",
         "dataset": ["dma"]
-      }
-    },
-    {
-      "id": "zone-si-tickets",
-      "after": "zone-el-101",
-      "cue": 278143207,
-      "filters": {
-        "zone.siTickets": true
       }
     },
     {
