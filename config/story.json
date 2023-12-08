@@ -11,6 +11,9 @@
       "id": "zone-taboola-recommendations",
       "after": "zone-el-101",
       "tracking": true,      
+      "filters": {
+        "marketInfo.allow_ads": true
+      },
       "zephr": {
         "feature": "zone-taboola-recommendations",
         "dataset": ["dma"]
