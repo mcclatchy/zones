@@ -12,7 +12,7 @@
       "after": "zone-el-101",
       "tracking": true,      
       "filters": {
-        "marketInfo.allow_ads": true
+        "ads": true
       },
       "zephr": {
         "feature": "zone-taboola-recommendations",
