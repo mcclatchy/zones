@@ -2,7 +2,7 @@
   "wps": ".story-body [id^=zone-el]",
   "ignore": ["zone-el-16"],
   "cadence": {
-    "subscriber": 4,
+    "subscriber": 5,
     "dma": 3,
     "standard": 3
   },
