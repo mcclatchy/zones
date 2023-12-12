@@ -13,6 +13,7 @@ async function distributeZones(locker) {
   zones.setLocker(locker);
   zones.setConfig("subscriber", subscriber);
   zones.setConfig("dma", subscriber ? true : await locker.user.isInDMA());
+  zones.setConfig("ads", locker.getYozonsLocker("core").areAdsAllowed());
 
   // Config files 
   if(!locker.config) {
