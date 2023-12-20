@@ -32,16 +32,6 @@
         "feature": "zone-events-calendar",
         "dataset": ["marketInfo.domain"]
       }
-    },
-    {
-      "id": "zone-editor-picks",
-      "vip": "#secondary-story-3",
-      "cue": 280305494,
-      "classList": ["three-columns"],
-      "filters": {
-        "subscriber": true,
-        "zone.editorPicks": true
-      }
     }
   ]
 }
