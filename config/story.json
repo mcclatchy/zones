@@ -30,6 +30,14 @@
       "filters": {
         "zone.lexgoEatSponsor": true
       }
+    },
+    {
+      "id": "zone-disabled-comments",
+      "vip": "#zone-el-16",
+      "cue": "283807313",
+      "filters": {
+        "subscriber": true
+      }
     }
   ]
 }
