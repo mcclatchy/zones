@@ -48,6 +48,15 @@
       "filters": {
         "zone.eeditionPromoSections": true
       }
+    },
+    {
+      "id": "zone-el-8",
+      "vip": "[data-tb-region='BigSix-Top']",
+      "style": "width: min(var(--section-width), 100vw); margin: 0 auto; padding: 0;",
+      "position": "afterend",
+      "filters": {
+        "zone.vtotest": true
+      }
     }
   ]
 }
