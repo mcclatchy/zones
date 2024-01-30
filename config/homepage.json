@@ -40,14 +40,6 @@
       "filters": {
         "zone.eeditionPromoGames": true
       }
-    },
-    {
-      "id": "zone-eedition-promo-sections",
-      "vip": "#secondary-story-3",
-      "cue": 284301373,
-      "filters": {
-        "zone.eeditionPromoSections": true
-      }
     }
   ]
 }
