@@ -38,6 +38,17 @@
       "filters": {
         "subscriber": true
       }
+    },
+    {
+      "id": "zone-gdc-betting-digest",
+      "after": "zone-el-101",
+      "zephr": {
+        "feature": "zone-gdc-betting-digest",
+        "dataset": ["marketInfo.domain"]
+      },
+      "filters": {
+        "zone.gdcStoryDigest": true
+      }
     }
   ]
 }
