@@ -44,7 +44,8 @@
       "after": "zone-el-101",
       "tracking": true,      
       "filters": {
-        "ads": true
+        "ads": true,
+        "subscriber": true
       },
       "zephr": {
         "feature": "zone-taboola-recommendations",
