@@ -7,12 +7,22 @@ import * as config from "./lib/config.js";
 import * as story from "./lib/story.js";
 
 async function distributeZones(locker) {
-  const subscriber = locker.user.isSubscriber();
+  let subscriber, dma;
+
+  // DSP limited to production domains
+  try {
+    subscriber = locker.user.isSubscriber();
+    dma = await locker.user.isInDMA();
+  } catch(e) {
+    subscriber = false;
+    dma = false
+    console.warn("DSP is not available");
+  }
 
   // Setup
   zones.setLocker(locker);
   zones.setConfig("subscriber", subscriber);
-  zones.setConfig("dma", subscriber ? true : await locker.user.isInDMA());
+  zones.setConfig("dma", subscriber ? true : dma);
   zones.setConfig("ads", locker.getYozonsLocker("core").areAdsAllowed());
 
   // Config files 
