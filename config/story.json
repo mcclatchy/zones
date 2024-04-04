@@ -45,7 +45,7 @@
       "tracking": true,      
       "filters": {
         "ads": true,
-        "subscriber": true
+        "dma": true
       },
       "zephr": {
         "feature": "zone-taboola-recommendations",
