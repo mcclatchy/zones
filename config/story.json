@@ -30,39 +30,6 @@
       "filters": {
         "zone.lexgoEatSponsor": true
       }
-    },
-    {
-      "id": "zone-disabled-comments",
-      "vip": "#zone-el-16",
-      "cue": "283807313",
-      "filters": {
-        "subscriber": true
-      }
-    },
-    {
-      "id": "zone-taboola-recommendations",
-      "after": "zone-el-101",
-      "tracking": true,      
-      "filters": {
-        "ads": true,
-        "dma": true
-      },
-      "zephr": {
-        "feature": "zone-taboola-recommendations",
-        "dataset": ["dma"]
-      }
-    },
-    {
-      "id": "zone-gdc-betting-digest",
-      "after": "zone-el-101",
-      "zephr": {
-        "feature": "zone-gdc-betting-digest",
-        "dataset": ["marketInfo.domain"]
-      },
-      "filters": {
-        "zone.gdcStoryDigest": true
-      },
-      "style": "margin: var(--space-lg) auto"
     }
   ]
 }
