@@ -11,27 +11,10 @@
       "type": "ad"
     },
     {
-      "id": "zone-community-events",
-      "vip": "#secondary-story-9",
-      "filters": {
-        "zone.communityEvents": true
-      },
-      "zephr": {
-        "feature": "zone-community-events",
-        "dataset": ["marketInfo.domain"]
-      }
-    },
-    {
       "id": "zone-events-calendar",
-      "vip": "#secondary-story-7",
-      "classList": ["paper", "two-columns", "two-rows"],
-      "filters": {
-        "zone-events-calendar": true
-      },
-      "zephr": {
-        "feature": "zone-events-calendar",
-        "dataset": ["marketInfo.domain"]
-      }
+      "vip": "[data-tb-region='Spill-2']",
+      "classList": ["paper", "three-columns"],
+      "cue": 289361385
     },
     {
       "id": "zone-eedition-promo-games",
