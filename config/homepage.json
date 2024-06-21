@@ -12,8 +12,9 @@
     },
     {
       "id": "zone-events-calendar",
-      "vip": "[data-tb-region='Spill-2']",
+      "vip": "[data-tb-region='Spill-2'], #main-content > :last-child",
       "classList": ["paper", "three-columns"],
+      "style": "width: min(100%, var(--section-width)); margin: 0 auto;",
       "cue": 289361385
     },
     {
