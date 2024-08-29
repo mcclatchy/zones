@@ -7,6 +7,12 @@ import * as config from "./lib/config.js";
 import * as story from "./lib/story.js";
 
 async function distributeZones(locker) {
+  // Using a section config to scale from this repo to experiences
+  if(locker.getConfig("zones") == "experiences") {
+    return Promise.resolve("zones-loaded");
+  }
+
+  // Proceed as normal
   let subscriber, dma;
 
   // DSP limited to production domains
