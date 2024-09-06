@@ -8,7 +8,7 @@ import * as story from "./lib/story.js";
 
 async function distributeZones(locker) {
   // Using a section config to scale from this repo to experiences
-  if(locker.getConfig("zones") != "experiences") {
+  // if(locker.getConfig("zones") != "experiences") {
     let subscriber, dma;
 
     // DSP limited to production domains
@@ -68,7 +68,7 @@ async function distributeZones(locker) {
         resolve("zones-loaded")
       });
     });
-  }
+  // }
 }
 
 export default distributeZones;
